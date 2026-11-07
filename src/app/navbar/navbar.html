@@ -1,0 +1,64 @@
+<nav class="navbar">
+
+  <div class="brand">
+
+    <div class="brand-logo">
+      🚀
+    </div>
+
+    <div>
+      <h2>My Web App</h2>
+      <span>Student Services</span>
+    </div>
+
+  </div>
+
+
+  <div class="nav-links">
+
+    <a
+      routerLink="/home"
+      routerLinkActive="active"
+    >
+      🏠 Home
+    </a>
+
+    <a
+      routerLink="/calculator"
+      routerLinkActive="active"
+    >
+      🧮 Calculator
+    </a>
+
+    <a
+      routerLink="/feedback"
+      routerLinkActive="active"
+    >
+      💬 Feedback
+    </a>
+
+    <a
+      routerLink="/todo"
+      routerLinkActive="active"
+    >
+      ✅ Tasks
+    </a>
+
+    <a
+      routerLink="/profile"
+      routerLinkActive="active"
+    >
+      👤 Profile
+    </a>
+
+  </div>
+
+
+  <button
+    class="logout-btn"
+    (click)="logout()"
+  >
+    Logout
+  </button>
+
+</nav>

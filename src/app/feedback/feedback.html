@@ -1,0 +1,250 @@
+<div class="feedback-page">
+
+  <div class="feedback-container">
+
+
+    <div class="feedback-header">
+
+      <div class="header-icon">
+        💬
+      </div>
+
+      <div>
+
+        <span>YOUR VOICE MATTERS</span>
+
+        <h1>Share Your Feedback</h1>
+
+        <p>
+          Help us improve by sharing your experience.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="content-grid">
+
+
+      <div class="feedback-card">
+
+
+        <div class="form-group">
+
+          <label>
+            Full Name
+          </label>
+
+          <input
+            type="text"
+            placeholder="Enter your full name"
+            [(ngModel)]="name"
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            Email Address
+          </label>
+
+          <input
+            type="email"
+            placeholder="Enter your email"
+            [(ngModel)]="email"
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            Feedback Category
+          </label>
+
+          <select [(ngModel)]="category">
+
+            <option value="">
+              Select a category
+            </option>
+
+            <option value="Website">
+              Website
+            </option>
+
+            <option value="Calculator">
+              Calculator
+            </option>
+
+            <option value="Service">
+              Service
+            </option>
+
+            <option value="Support">
+              Customer Support
+            </option>
+
+            <option value="Other">
+              Other
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            How would you rate your experience?
+          </label>
+
+          <div class="stars">
+
+            @for (star of stars; track star) {
+
+              <button
+                type="button"
+                [class.selected]="star <= rating"
+                (click)="setRating(star)"
+              >
+                ★
+              </button>
+
+            }
+
+          </div>
+
+          <div class="rating-text">
+            {{ getRatingText() }}
+          </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            Your Feedback
+          </label>
+
+          <textarea
+            rows="5"
+            placeholder="Tell us what you liked or what we can improve..."
+            [(ngModel)]="feedbackText"
+          ></textarea>
+
+        </div>
+
+
+        @if (errorMessage) {
+
+          <div class="error-message">
+            ⚠️ {{ errorMessage }}
+          </div>
+
+        }
+
+
+        <button
+          class="submit-btn"
+          (click)="submitFeedback()"
+        >
+          Submit Feedback →
+        </button>
+
+
+        @if (submitted) {
+
+          <div class="success-message">
+
+            <div class="success-icon">
+              ✓
+            </div>
+
+            <div>
+
+              <h3>Thank You, {{ name }}!</h3>
+
+              <p>
+                Your feedback has been submitted successfully.
+              </p>
+
+            </div>
+
+            <button
+              class="new-btn"
+              (click)="resetForm()"
+            >
+              New Feedback
+            </button>
+
+          </div>
+
+        }
+
+      </div>
+
+
+      <div class="side-card">
+
+        <div class="side-icon">
+          ⭐
+        </div>
+
+        <h2>Your Feedback Matters</h2>
+
+        <p>
+          Every response helps us understand
+          what works well and what can be improved.
+        </p>
+
+
+        <div class="feature">
+          <span>✓</span>
+          Quick and easy form
+        </div>
+
+        <div class="feature">
+          <span>✓</span>
+          Rate your experience
+        </div>
+
+        <div class="feature">
+          <span>✓</span>
+          Share your suggestions
+        </div>
+
+
+        @if (feedbackHistory.length > 0) {
+
+          <div class="history">
+
+            <h3>Recent Feedback</h3>
+
+            @for (
+              item of feedbackHistory;
+              track $index
+            ) {
+
+              <div class="history-item">
+                {{ item }}
+              </div>
+
+            }
+
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

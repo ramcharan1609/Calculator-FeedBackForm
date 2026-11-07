@@ -1,0 +1,290 @@
+/* =========================================
+   TODO PAGE
+========================================= */
+
+.todo-page {
+  min-height: calc(100vh - 75px);
+
+  padding: 45px 30px;
+
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(38, 39, 39, 0.17),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 85%,
+      rgba(23, 22, 27, 0.17),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #eef3ff,
+      #f8f4ff,
+      #edf8ff
+    );
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.todo-container {
+  max-width: 850px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.todo-header {
+  padding: 30px;
+
+  border-radius: 20px;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #0c0d0f 0%,
+    #393939 100%
+  );
+
+  box-shadow:
+    0 15px 35px rgba(102, 126, 234, 0.22);
+
+  margin-bottom: 22px;
+}
+
+.todo-header h1 {
+  margin: 0 0 7px;
+
+  font-size: 28px;
+}
+
+.todo-header p {
+  margin: 0;
+
+  opacity: 0.9;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   ADD TASK
+========================================= */
+
+.add-task {
+  display: flex;
+
+  gap: 10px;
+
+  padding: 20px;
+
+  margin-bottom: 20px;
+
+  border-radius: 17px;
+
+  background: white;
+
+  box-shadow:
+    0 10px 25px rgba(50, 50, 100, 0.08);
+}
+
+.add-task input {
+  flex: 1;
+
+  border: 1px solid #e1e1ed;
+
+  border-radius: 10px;
+
+  padding: 12px 14px;
+
+  outline: none;
+
+  font-size: 13px;
+}
+
+.add-task input:focus {
+  border-color: #667eea;
+}
+
+.add-task button {
+  border: none;
+
+  padding: 0 22px;
+
+  border-radius: 10px;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #667eea,
+    #764ba2
+  );
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.task-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  padding: 20px;
+
+  border-radius: 16px;
+
+  text-align: center;
+
+  background: white;
+
+  box-shadow:
+    0 8px 20px rgba(50, 50, 100, 0.07);
+}
+
+.stat-card strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #5969df;
+
+  font-size: 25px;
+}
+
+.stat-card span {
+  color: #7d7d92;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   TASK LIST
+========================================= */
+
+.task-list {
+  padding: 22px;
+
+  border-radius: 18px;
+
+  background: white;
+
+  box-shadow:
+    0 10px 25px rgba(50, 50, 100, 0.08);
+}
+
+.task-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 13px;
+
+  margin-bottom: 9px;
+
+  border-radius: 11px;
+
+  background: #f7f7fc;
+}
+
+.task-item:last-child {
+  margin-bottom: 0;
+}
+
+.task-item input {
+  width: 17px;
+  height: 17px;
+}
+
+.task-title {
+  flex: 1;
+
+  color: #3c3c52;
+
+  font-size: 13px;
+}
+
+.task-title.completed {
+  color: #9999a9;
+
+  text-decoration: line-through;
+}
+
+.delete-btn {
+  border: none;
+
+  padding: 7px 10px;
+
+  border-radius: 7px;
+
+  color: #d94b4b;
+
+  background: #ffecec;
+
+  font-size: 12px;
+}
+
+.empty-message {
+  text-align: center;
+
+  padding: 25px;
+
+  color: #999;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .todo-page {
+    padding: 25px 15px;
+  }
+
+  .add-task {
+    flex-direction: column;
+  }
+
+  .add-task button {
+    height: 45px;
+  }
+
+  .task-stats {
+    gap: 8px;
+  }
+
+  .stat-card {
+    padding: 15px 8px;
+  }
+
+  .stat-card strong {
+    font-size: 21px;
+  }
+}

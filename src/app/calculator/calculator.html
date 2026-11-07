@@ -1,0 +1,189 @@
+<div class="calculator-page">
+
+  <div class="calculator-layout">
+
+    <!-- CALCULATOR -->
+    <div class="calculator-card">
+
+      <!-- Header -->
+      <div class="calculator-header">
+
+        <div>
+          <span class="small-title">SMART TOOL</span>
+
+          <h1>
+            🧮 Calculator
+          </h1>
+        </div>
+
+        <span class="basic-badge">
+          BASIC
+        </span>
+
+      </div>
+
+
+      <!-- Display -->
+      <div class="display-box">
+
+        <div class="display-text">
+          {{ display }}
+        </div>
+
+      </div>
+
+
+      <!-- Buttons -->
+      <div class="buttons">
+
+        <!-- Row 1 -->
+        <button
+          class="function"
+          (click)="clear()">
+          AC
+        </button>
+
+        <button
+          class="function"
+          (click)="delete()">
+          ⌫
+        </button>
+
+        <button
+          class="function"
+          (click)="percentage()">
+          %
+        </button>
+
+        <button
+          class="operator"
+          (click)="chooseOperator('/')">
+          ÷
+        </button>
+
+
+        <!-- Row 2 -->
+        <button (click)="addNumber('7')">
+          7
+        </button>
+
+        <button (click)="addNumber('8')">
+          8
+        </button>
+
+        <button (click)="addNumber('9')">
+          9
+        </button>
+
+        <button
+          class="operator"
+          (click)="chooseOperator('*')">
+          ×
+        </button>
+
+
+        <!-- Row 3 -->
+        <button (click)="addNumber('4')">
+          4
+        </button>
+
+        <button (click)="addNumber('5')">
+          5
+        </button>
+
+        <button (click)="addNumber('6')">
+          6
+        </button>
+
+        <button
+          class="operator"
+          (click)="chooseOperator('-')">
+          −
+        </button>
+
+
+        <!-- Row 4 -->
+        <button (click)="addNumber('1')">
+          1
+        </button>
+
+        <button (click)="addNumber('2')">
+          2
+        </button>
+
+        <button (click)="addNumber('3')">
+          3
+        </button>
+
+        <button
+          class="operator"
+          (click)="chooseOperator('+')">
+          +
+        </button>
+
+
+        <!-- Row 5 -->
+        <button
+          class="zero"
+          (click)="addNumber('0')">
+          0
+        </button>
+
+        <button
+          (click)="addDecimal()">
+          .
+        </button>
+
+        <button
+          class="equals"
+          (click)="calculate()">
+          =
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- HISTORY -->
+    <div class="history-card">
+
+      <div class="history-header">
+
+        <h2>
+          Recent Calculations
+        </h2>
+
+        <span>
+          History
+        </span>
+
+      </div>
+
+      @if (history.length === 0) {
+
+        <p class="no-history">
+          No calculations yet
+        </p>
+
+      } @else {
+
+        <div class="history-list">
+
+          @for (item of history; track $index) {
+
+            <div class="history-item">
+              {{ item }}
+            </div>
+
+          }
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</div>

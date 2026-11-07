@@ -1,0 +1,117 @@
+<div class="home-page">
+
+  <!-- Welcome Section -->
+  <section class="welcome-section">
+
+    <div class="welcome-content">
+      <span class="welcome-label">STUDENT SERVICE PORTAL</span>
+
+      <h1>
+        Welcome, {{ authService.getUsername() }}! 👋
+      </h1>
+
+      <p>
+        Manage your daily tools, share feedback, and organize your tasks
+        from one place. 🚀
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- Services Section -->
+  <section class="services-section">
+
+    <div class="section-heading">
+      <h2>Available Services</h2>
+      <p>Choose a service to get started</p>
+    </div>
+
+
+    <!-- Service Cards -->
+    <div class="services-grid">
+
+      <!-- Calculator -->
+      <div class="service-card">
+
+        <div class="service-icon calculator-icon">
+          🧮
+        </div>
+
+        <h3>Calculator</h3>
+
+        <p>
+          Perform calculations quickly with calculation history.
+        </p>
+
+        <a routerLink="/calculator" class="service-link">
+          Open Calculator →
+        </a>
+
+      </div>
+
+
+      <!-- Feedback -->
+      <div class="service-card">
+
+        <div class="service-icon feedback-icon">
+          💬
+        </div>
+
+        <h3>Feedback</h3>
+
+        <p>
+          Share your thoughts and rate our service.
+        </p>
+
+        <a routerLink="/feedback" class="service-link">
+          Give Feedback →
+        </a>
+
+      </div>
+
+
+      <!-- Tasks -->
+      <div class="service-card">
+
+        <div class="service-icon task-icon">
+          ✅
+        </div>
+
+        <h3>Task Manager</h3>
+
+        <p>
+          Organize your tasks and track your progress.
+        </p>
+
+        <a routerLink="/todo" class="service-link">
+          Manage Tasks →
+        </a>
+
+      </div>
+
+
+      <!-- Profile -->
+      <div class="service-card">
+
+        <div class="service-icon profile-icon">
+          👤
+        </div>
+
+        <h3>Profile</h3>
+
+        <p>
+          View your account information and available modules.
+        </p>
+
+        <a routerLink="/profile" class="service-link">
+          View Profile →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>

@@ -1,0 +1,109 @@
+<div class="profile-page">
+
+  <div class="profile-container">
+
+
+    <div class="profile-banner">
+
+      <div class="avatar">
+        👤
+      </div>
+
+      <div>
+
+        <span>MY ACCOUNT</span>
+
+        <h1>
+          {{ authService.getUsername() }}
+        </h1>
+
+        <p>
+          Student Account
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="profile-grid">
+
+
+      <div class="profile-card">
+
+        <h2>Personal Information</h2>
+
+
+        <div class="info">
+
+          <span>Username</span>
+
+          <strong>
+            {{ authService.getUsername() }}
+          </strong>
+
+        </div>
+
+
+        <div class="info">
+
+          <span>Role</span>
+
+          <strong>
+            Student
+          </strong>
+
+        </div>
+
+
+        <div class="info">
+
+          <span>Account Status</span>
+
+          <strong class="active-status">
+            ● Active
+          </strong>
+
+        </div>
+
+
+        <div class="info">
+
+          <span>Access</span>
+
+          <strong>
+            All Services
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <div class="profile-card">
+
+        <h2>Available Modules</h2>
+
+        <div class="module">
+          🧮 Calculator
+        </div>
+
+        <div class="module">
+          💬 Feedback
+        </div>
+
+        <div class="module">
+          ✅ Task Manager
+        </div>
+
+        <div class="module">
+          📊 Dashboard
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

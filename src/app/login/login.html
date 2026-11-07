@@ -1,0 +1,68 @@
+<div class="login-page">
+
+  <div class="login-card">
+
+    <div class="brand-icon">
+      🚀
+    </div>
+
+    <h1>Welcome Back</h1>
+
+    <p class="subtitle">
+      Login to access your services
+    </p>
+
+
+    <div class="input-group">
+
+      <label>Username</label>
+
+      <div class="input-wrapper">
+        <span>👤</span>
+
+        <input
+          type="text"
+          placeholder="Enter username"
+          [(ngModel)]="username"
+        >
+      </div>
+
+    </div>
+
+
+    <div class="input-group">
+
+      <label>Password</label>
+
+      <div class="input-wrapper">
+        <span>🔒</span>
+
+        <input
+          type="password"
+          placeholder="Enter password"
+          [(ngModel)]="password"
+        >
+      </div>
+
+    </div>
+
+
+    <button
+      class="login-btn"
+      (click)="login()"
+    >
+      Login
+    </button>
+
+
+    @if (errorMessage) {
+
+      <div class="error-message">
+        ⚠️ {{ errorMessage }}
+      </div>
+
+    }
+
+  </div>
+
+</div>
